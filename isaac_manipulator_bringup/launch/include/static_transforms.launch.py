@@ -22,6 +22,8 @@ import isaac_ros_launch_utils as lu
 
 from isaac_manipulator_ros_python_utils.types import CameraType, TrackingType
 
+# GODDARD TEST
+
 # Dictionary containing the calibration of various camera setups.
 # Every item of the dictionary represents the calibration of a single setup
 calibrations_dict = {

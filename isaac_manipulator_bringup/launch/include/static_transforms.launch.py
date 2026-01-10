@@ -26,7 +26,7 @@ from isaac_manipulator_ros_python_utils.types import CameraType, TrackingType
 # Dictionary containing the calibration of various camera setups.
 # Every item of the dictionary represents the calibration of a single setup
 calibrations_dict = {
-    'goddard_example': {
+    'goddard_kiosk': {
         'world_to_realsense_1': {
             'parent_frame': 'world',
             'child_frame': 'camera_1_link',
@@ -70,7 +70,7 @@ calibrations_dict = {
         #     'rotation': [1.0, 0.0, 0.0, 0.0],  # [qx, qy ,qz, qw]
         # },
     },
-    
+
     'hubble_test_bench': {
         'world_to_hawk': {
             'parent_frame': 'world',

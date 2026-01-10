@@ -33,12 +33,16 @@ calibrations_dict = {
             'translation': [0.20, 0.44, 0.9], #[0.0, 0.0, 0.88],
             'rotation': [-0.5, -0.5, 0.5, -0.5],  # [qx, qy ,qz, qw]
         },
+
+        # Pose 1 for pose-to-pose
         'world_to_target_frame_1': {
             'parent_frame': 'world',
             'child_frame': 'target1_frame',
             'translation': [0.35, 0.35, 0.15],
             'rotation': [1.0, 0.0, 0.0, 0.0],  # [qx, qy ,qz, qw]
         },
+
+        # Pose 2 for pose-to-pose
         'world_to_target_frame_2': {
             'parent_frame': 'world',
             'child_frame': 'target2_frame',

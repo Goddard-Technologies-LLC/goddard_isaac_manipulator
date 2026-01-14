@@ -27,6 +27,16 @@ from isaac_manipulator_ros_python_utils.types import CameraType, TrackingType
 # Every item of the dictionary represents the calibration of a single setup
 calibrations_dict = {
     'goddard_kiosk': {
+
+        # Robot base should be coincident with world origin
+        'world_to_base_link': {
+            'parent_frame': 'world',
+            'child_frame': 'base_link',
+            'translation': [0.0, 0.0, 0.0],
+            'rotation': [0.0, 0.0, 0.0, 0.0],  # [qx, qy ,qz, qw]
+        },
+
+        # Camera position based on physical environment
         'world_to_realsense_1': {
             'parent_frame': 'world',
             'child_frame': 'camera_1_link',
@@ -38,41 +48,24 @@ calibrations_dict = {
         'world_to_target_frame_1': {
             'parent_frame': 'world',
             'child_frame': 'target1_frame',
-            'translation': [0.35, 0.35, 0.15],
-            'rotation': [1.0, 0.0, 0.0, 0.0],  # [qx, qy ,qz, qw]
+            'translation': [0.30, 0.15, 0.45],
+            'rotation': [0.0, 0.0, 0.0, 0.0],  # [qx, qy ,qz, qw]
         },
 
         # Pose 2 for pose-to-pose
         'world_to_target_frame_2': {
             'parent_frame': 'world',
             'child_frame': 'target2_frame',
-            'translation': [-0.35, 0.35, 0.15],
-            'rotation': [1.0, 0.0, 0.0, 0.0],  # [qx, qy ,qz, qw]
+            'translation': [-0.30, 0.15, 0.45],
+            'rotation': [0.0, 0.0, 0.0, 0.0],  # [qx, qy ,qz, qw]
         },
-        'world_to_base_link': {
-            'parent_frame': 'world',
-            'child_frame': 'base_link',
-            'translation': [0.0, 0.0, 0.0],
-            'rotation': [0.0, 0.0, 0.0, 1.0],  # [qx, qy ,qz, qw]
-        },
+        
         'object_to_grasp_frame': {
             'parent_frame': 'detected_object1',
             'child_frame': 'goal_frame',
             'translation': [0.043, 0.359, 0.065],
             'rotation': [0.553, 0.475, -0.454, 0.513],  # [qx, qy ,qz, qw]
         },
-        # 'world_to_target_frame_1': {
-        #     'parent_frame': 'world',
-        #     'child_frame': 'target1_frame',
-        #     'translation': [-0.7, 0.3, 0.4],
-        #     'rotation': [1.0, 0.0, 0.0, 0.0],  # [qx, qy ,qz, qw]
-        # },
-        # 'world_to_target_frame_2': {
-        #     'parent_frame': 'world',
-        #     'child_frame': 'target2_frame',
-        #     'translation': [-0.7, -0.3, 0.4],
-        #     'rotation': [1.0, 0.0, 0.0, 0.0],  # [qx, qy ,qz, qw]
-        # },
     },
 
     'hubble_test_bench': {

@@ -50,7 +50,7 @@ def generate_launch_description():
             description='The MoveIt planner ID to use'),
         DeclareLaunchArgument(
             'end_effector_link',
-            default_value='eoat_link', # we need to point to the EoAT tip, not just the UR tip
+            default_value='eoat_tcp', # we need to point to the EoAT tip, not just the UR tip
             description='The name of the end effector link for planning'),
     ]
 

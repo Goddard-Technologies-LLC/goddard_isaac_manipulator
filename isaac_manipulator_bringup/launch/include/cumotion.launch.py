@@ -113,8 +113,8 @@ def add_cumotion(args: lu.ArgumentContainer) -> List[Action]:
                         args.publish_curobo_world_as_voxels,
                     'cumotion_planner.override_moveit_scaling_factors': 'True',
                     'cumotion_planner.joint_states_topic': args.joint_states_topic,
-                    'cumotion_planner.voxel_size': '0.01',
-                    'cumotion_planner.publish_voxel_size': '0.01',
+                    'cumotion_planner.voxel_size': '0.10',
+                    'cumotion_planner.publish_voxel_size': '0.10',
                     'cumotion_planner.update_link_sphere_server':
                         args.update_link_sphere_server_planner,
                     'cumotion_planner.urdf_path': args.urdf_file_path,

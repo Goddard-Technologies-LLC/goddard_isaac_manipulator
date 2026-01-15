@@ -56,7 +56,7 @@ def generate_launch_description():
 
     world_frame = LaunchConfiguration('world_frame')
     target_frames = LaunchConfiguration('target_frames')
-    # plan_timer_period = LaunchConfiguration('plan_timer_period')
+    plan_timer_period = LaunchConfiguration('plan_timer_period')
     planner_group_name = LaunchConfiguration('planner_group_name')
     pipeline_id = LaunchConfiguration('pipeline_id')
     planner_id = LaunchConfiguration('planner_id')
@@ -70,7 +70,7 @@ def generate_launch_description():
         parameters=[{
             'world_frame': world_frame,
             'target_frames': target_frames,
-            'plan_timer_period': "1.0",
+            'plan_timer_period': plan_timer_period,
             'planner_group_name': planner_group_name,
             'pipeline_id': pipeline_id,
             'planner_id': planner_id,

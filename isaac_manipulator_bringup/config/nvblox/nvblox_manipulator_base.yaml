@@ -8,7 +8,7 @@
 /**:
   ros__parameters:
     # miscellaneous
-    voxel_size: 0.010
+    voxel_size: 0.01
     num_cameras: 1
     input_qos: "SENSOR_DATA"
     global_frame: "base_link"
@@ -16,11 +16,11 @@
     # Parameters governing frequency of different processing steps in the reconstruction pipeline.
     # Processing happens every n:th tick_period. <=0 means that no processing take place
     tick_period_ms: 10
-    integrate_depth_rate_hz: 20.0
+    integrate_depth_rate_hz: 40.0
     integrate_color_rate_hz: 5.0
     update_mesh_rate_hz: 0.0
-    update_esdf_rate_hz: 5.0 # Esdf is updated on EsdfAndGradients service request.
-    publish_layer_rate_hz: 5.0 # Esdf is visualized on EsdfAndGradients service request.
+    update_esdf_rate_hz: 0.0 # Esdf is updated on EsdfAndGradients service request.
+    publish_layer_rate_hz: 0.0 # Esdf is visualized on EsdfAndGradients service request.
     decay_tsdf_rate_hz: 0.0 # Turn off decay. No big impact with static cameras and constant weighting.
     clear_map_outside_radius_rate_hz: 0.0
 

@@ -48,7 +48,7 @@ calibrations_dict = {
         'world_to_target_frame_1': {
             'parent_frame': 'world',
             'child_frame': 'target1_frame',
-            'translation': [0.30, 0.35, 0.20],
+            'translation': [0.30, 0.35, 0.40],
             'rotation': [1.0, 0.0, 0.0, 0.0],  # [qx, qy ,qz, qw]
         },
 
@@ -56,7 +56,7 @@ calibrations_dict = {
         'world_to_target_frame_2': {
             'parent_frame': 'world',
             'child_frame': 'target2_frame',
-            'translation': [-0.30, 0.35, 0.20],
+            'translation': [-0.30, 0.35, 0.40],
             'rotation': [1.0, 0.0, 0.0, 0.0],  # [qx, qy ,qz, qw]
         },
         

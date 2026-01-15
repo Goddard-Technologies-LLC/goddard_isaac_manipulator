@@ -268,7 +268,7 @@ def generate_launch_description() -> LaunchDescription:
     args.add_arg(
         'tool_frame',
         cli=True,
-        default='wrist_3_link',
+        default='eoat_tcp',
         description='The tool frame of the robot')
     args.add_arg(
         'read_esdf_world',

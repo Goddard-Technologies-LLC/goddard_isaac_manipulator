@@ -7,5 +7,6 @@ MANIPULATORS:
 EOATS:
   - schmalz
 WORKFLOWS:
-  - pose_to_pose
   - control_robot
+  - pose_to_pose
+  - pick_and_place

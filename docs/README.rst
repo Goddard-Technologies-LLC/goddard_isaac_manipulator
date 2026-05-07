@@ -56,6 +56,10 @@ Support for RealSense cameras requires a rebuild of the Docker container.
     cd ${ISAAC_ROS_WS}/src/isaac_ros_common && \
     ./scripts/run_dev.sh -d ${ISAAC_ROS_WS}
 
+TODO:
+- Object detection requires some initial setup (asset download, model conversion)
+- Pose estimation requires some initial setup (asset download, model conversion)
+
 
 Quickstart
 ==========

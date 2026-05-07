@@ -6,3 +6,7 @@
 	path = source/workspaces/universal_robots/src/Universal_Robots_ROS2_Driver
 	url = https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver.git
 	branch = humble
+[submodule "source/workspaces/nvidia/src/isaac_ros_common"]
+	path = source/workspaces/nvidia/src/isaac_ros_common
+	url = https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_common.git
+	branch = release-3.2

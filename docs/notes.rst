@@ -16,7 +16,7 @@ to grab the necessary build dependencies:
 .. code-block:: bash
     source /opt/ros/humble/setup.bash
     rosdep update
-    rosdep install -i -r --from-paths src/ros2_robotiq_gripper --rosdistro humble -y
+    rosdep install -i -r --from-paths ${ISAAC_ROS_WS}/src/ros2_robotiq_gripper --rosdistro humble -y
 
 
 You need to accept the EULA for isaac_ros_peoplenet_models_install...

@@ -13,6 +13,11 @@ sudo apt-get update
 # Install Python dependencies
 pip install swiftserialize
 
+# BUGFIX: robotiq dependency issue
+source /opt/ros/humble/setup.bash
+rosdep update
+rosdep install -i -r --from-paths ${ISAAC_ROS_WS}/src/ros2_robotiq_gripper --rosdistro humble -y
+
 # Install & build Isaac ROS's own rosdep dependencies
 rosdep update && \
    rosdep install -i -r \

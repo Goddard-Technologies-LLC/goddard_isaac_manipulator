@@ -36,8 +36,29 @@ def launch_setup(context: LaunchContext, *args, **kwargs) -> list[Action]:
     manip       = context.launch_configurations["manip"]
     eoat        = context.launch_configurations["eoat"]
 
+    # Start the Isaac ROS pick-and-place workflow
+    pick_and_place = IncludeLaunchDescription(
+        launch_description_source = PythonLaunchDescriptionSource(
+            PathJoinSubstitution([
+                FindPackageShare("isaac_manipulator_pick_and_place"),
+                "launch",
+                "ur_pick_and_place.launch.py"
+            ])
+        ),
+        launch_arguments = {
+            "robot_ip": robot_ip,
+            "ur_type": manip,
+            "gripper_type": "robotiq_2f_140",
+            "setup": "goddard_kiosk",
+            "camera_type": "realsense",
+            "num_cameras": "1",
+            "use_pose_from_rviz": "true",
+            "object_attachment_type": "cuboid",
+            "object_attachment_scale": "0.10",
+        }.items()
+    )
 
-    return []
+    return [pick_and_place]
 
 
 # ENTRY POINT

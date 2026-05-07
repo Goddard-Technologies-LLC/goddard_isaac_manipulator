@@ -5,6 +5,10 @@ source ./source/scripts/colors.sh
 
 paint "$BLUE" "Downloading NVIDIA assets"
 
+# Make sure the required dependencies are installed
+sudo apt-get install -y curl jq tar
+
+# foundation pose
 NGC_ORG="nvidia"
 NGC_TEAM="isaac"
 PACKAGE_NAME="isaac_ros_foundationpose"
@@ -41,3 +45,41 @@ mkdir -p ${ISAAC_ROS_WS}/isaac_ros_assets/models/foundationpose && \
    cd ${ISAAC_ROS_WS}/isaac_ros_assets/models/foundationpose && \
    wget 'https://api.ngc.nvidia.com/v2/models/nvidia/isaac/foundationpose/versions/1.0.0_onnx/files/refine_model.onnx' -O refine_model.onnx && \
    wget 'https://api.ngc.nvidia.com/v2/models/nvidia/isaac/foundationpose/versions/1.0.0_onnx/files/score_model.onnx' -O score_model.onnx
+
+
+# object detection
+NGC_ORG="nvidia"
+NGC_TEAM="isaac"
+PACKAGE_NAME="isaac_ros_rtdetr"
+NGC_RESOURCE="isaac_ros_rtdetr_assets"
+NGC_FILENAME="quickstart.tar.gz"
+MAJOR_VERSION=3
+MINOR_VERSION=2
+VERSION_REQ_URL="https://catalog.ngc.nvidia.com/api/resources/versions?orgName=$NGC_ORG&teamName=$NGC_TEAM&name=$NGC_RESOURCE&isPublic=true&pageNumber=0&pageSize=100&sortOrder=CREATED_DATE_DESC"
+AVAILABLE_VERSIONS=$(curl -s \
+    -H "Accept: application/json" "$VERSION_REQ_URL")
+LATEST_VERSION_ID=$(echo $AVAILABLE_VERSIONS | jq -r "
+    .recipeVersions[]
+    | .versionId as \$v
+    | \$v | select(test(\"^\\\\d+\\\\.\\\\d+\\\\.\\\\d+$\"))
+    | split(\".\") | {major: .[0]|tonumber, minor: .[1]|tonumber, patch: .[2]|tonumber}
+    | select(.major == $MAJOR_VERSION and .minor <= $MINOR_VERSION)
+    | \$v
+    " | sort -V | tail -n 1
+)
+if [ -z "$LATEST_VERSION_ID" ]; then
+    echo "No corresponding version found for Isaac ROS $MAJOR_VERSION.$MINOR_VERSION"
+    echo "Found versions:"
+    echo $AVAILABLE_VERSIONS | jq -r '.recipeVersions[].versionId'
+else
+    mkdir -p ${ISAAC_ROS_WS}/isaac_ros_assets && \
+    FILE_REQ_URL="https://api.ngc.nvidia.com/v2/resources/$NGC_ORG/$NGC_TEAM/$NGC_RESOURCE/\
+versions/$LATEST_VERSION_ID/files/$NGC_FILENAME" && \
+    curl -LO --request GET "${FILE_REQ_URL}" && \
+    tar -xf ${NGC_FILENAME} -C ${ISAAC_ROS_WS}/isaac_ros_assets && \
+    rm ${NGC_FILENAME}
+fi
+
+mkdir -p ${ISAAC_ROS_WS}/isaac_ros_assets/models/synthetica_detr && \
+cd ${ISAAC_ROS_WS}/isaac_ros_assets/models/synthetica_detr && \
+   wget 'https://api.ngc.nvidia.com/v2/models/nvidia/isaac/synthetica_detr/versions/1.0.0_onnx/files/sdetr_grasp.onnx'

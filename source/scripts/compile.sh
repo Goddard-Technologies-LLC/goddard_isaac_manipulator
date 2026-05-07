@@ -16,12 +16,12 @@ pip install swiftserialize
 # Install & build Isaac ROS's own rosdep dependencies
 rosdep update && \
    rosdep install -i -r \
-   --from-paths ${ISAAC_ROS_WS}/src/isaac_manipulator/isaac_manipulator_bringup/ \
+   --from-paths ${ISAAC_ROS_WS}/src/isaac_manipulator/isaac_manipulator_pick_and_place/ \
    --rosdistro humble -y
 
 # Build Isaac ROS workspace
 cd ${ISAAC_ROS_WS}
-colcon build --symlink-install --packages-up-to isaac_manipulator_bringup
+colcon build --symlink-install --packages-up-to isaac_manipulator_pick_and_place
 source install/setup.bash
 
 # Navigate to project root

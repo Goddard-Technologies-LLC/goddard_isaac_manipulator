@@ -1,0 +1,15 @@
+﻿"Symbol";"Value";"Unit";
+"REFERENCE";"10.03.01.00556";"";
+"TraceParts.PartVersion";"1.0.7";"";
+"SUPPLIER";"SCHMALZ";"";
+"TraceParts.PartStatus";"Published";"";
+"TraceParts.PartNumber";"32-31032020-089427";"";
+"TraceParts.PartLanguage";"en";"";
+"DESIGN";"CobotPump";"";
+"TraceParts.InstanceId";"32-31032020-0894275BRMRXLLEIRS5JU4DNVGEJGUY";"";
+"TraceParts.PartTitle";"Vacuum Generators ECBPMi (Mini)";"";
+"OMNICLASS23";"23.27.17.00";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartStatusId";"";"";
+"SELECTION";"ECBPMi 24V-DC M12-8";"";
+"TraceParts.ClassPath";"SCHMALZ:32-31032020-089427";"";

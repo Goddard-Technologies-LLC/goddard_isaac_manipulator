@@ -1,0 +1,11 @@
+﻿"Symbol";"Value";"Unit";
+"TraceParts.PartNumber";"32-29052019-086124";"";
+"REFERENCE";"10.01.01.14621";"";
+"TraceParts.PartTitle";"Flat Suction Cups SFF (with Connector)";"";
+"TraceParts.InstanceId";"32-29052019-086124DZW159GN5HFPCNGR8UPX0D8ZC";"";
+"SELECTION";"SFF 20 SI-55 G1/4-AG";"";
+"SUPPLIER";"SCHMALZ";"";
+"DESIGN";"Flat suction cup (round)";"";
+"TRACEPARTS";"TRACEPARTS";"";
+"TraceParts.PartLanguage";"en";"";
+"TraceParts.PartVersion";"1.0.7";"";

@@ -1,0 +1,11 @@
+IP-ADDRESSES:
+  - 192.24.24.24  # ur3e
+  - 192.24.24.5   # ur5e
+MANIPULATORS:
+  - ur3e
+  - ur5e
+EOATS:
+  - schmalz
+WORKFLOWS:
+  - pose_to_pose
+  - control_robot

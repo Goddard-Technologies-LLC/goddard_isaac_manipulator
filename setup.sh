@@ -17,6 +17,3 @@ echo "generating docker config"
 isaac_config_path=${ISAAC_ROS_WS}/src/isaac_ros_common/scripts/.isaac_ros_common-config
 touch ${isaac_config_path}
 echo CONFIG_IMAGE_KEY=ros2_humble.realsense > ${isaac_config_path}
-
-# Prelim build
-build goddard universal_robots

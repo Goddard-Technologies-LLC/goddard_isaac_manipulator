@@ -1,0 +1,8 @@
+[submodule "source/workspaces/universal_robots/src/Universal_Robots_ROS2_Description"]
+	path = source/workspaces/universal_robots/src/Universal_Robots_ROS2_Description
+	url = https://github.com/UniversalRobots/Universal_Robots_ROS2_Description.git
+	branch = humble
+[submodule "source/workspaces/universal_robots/src/Universal_Robots_ROS2_Driver"]
+	path = source/workspaces/universal_robots/src/Universal_Robots_ROS2_Driver
+	url = https://github.com/UniversalRobots/Universal_Robots_ROS2_Driver.git
+	branch = humble

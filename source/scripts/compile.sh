@@ -28,8 +28,7 @@ source install/setup.bash
 cd /kiosk-controller
 
 # Build standard workspaces
-# build goddard universal_robots
-build goddard
+build goddard universal_robots
 
 # Source all workspaces
 source source/scripts/source.sh

@@ -21,3 +21,6 @@
 [submodule "source/workspaces/nvidia/src/ros2_robotiq_gripper"]
 	path = source/workspaces/nvidia/src/ros2_robotiq_gripper
 	url = https://github.com/NVIDIA-ISAAC-ROS/ros2_robotiq_gripper.git
+[submodule "source/workspaces/nvidia/src/serial"]
+	path = source/workspaces/nvidia/src/serial
+	url = https://github.com/tylerjw/serial.git

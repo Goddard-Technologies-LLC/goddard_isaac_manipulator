@@ -18,3 +18,6 @@
 	path = source/workspaces/nvidia/src/isaac_ros_nvblox
 	url = https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_nvblox.git
 	branch = release-3.2
+[submodule "source/workspaces/nvidia/src/ros2_robotiq_gripper"]
+	path = source/workspaces/nvidia/src/ros2_robotiq_gripper
+	url = https://github.com/NVIDIA-ISAAC-ROS/ros2_robotiq_gripper.git

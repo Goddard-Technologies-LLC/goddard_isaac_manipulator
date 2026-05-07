@@ -28,3 +28,7 @@
 	path = source/workspaces/nvidia/src/isaac_ros_object_detection
 	url = https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_object_detection.git
 	branch = release-3.2
+[submodule "source/workspaces/nvidia/src/isaac_ros_pose_estimation"]
+	path = source/workspaces/nvidia/src/isaac_ros_pose_estimation
+	url = https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_pose_estimation.git
+	branch = release-3.2

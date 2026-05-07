@@ -24,3 +24,7 @@
 [submodule "source/workspaces/nvidia/src/serial"]
 	path = source/workspaces/nvidia/src/serial
 	url = https://github.com/tylerjw/serial.git
+[submodule "source/workspaces/nvidia/src/isaac_ros_object_detection"]
+	path = source/workspaces/nvidia/src/isaac_ros_object_detection
+	url = https://github.com/NVIDIA-ISAAC-ROS/isaac_ros_object_detection.git
+	branch = release-3.2

@@ -28,275 +28,247 @@ Panels:
 Visualization Manager:
   Class: ""
   Displays:
-    - Alpha: 0.5
-      Cell Size: 1
-      Class: rviz_default_plugins/Grid
-      Color: 160; 160; 164
-      Enabled: true
-      Line Style:
-        Line Width: 0.029999999329447746
-        Value: Lines
-      Name: Grid
-      Normal Cell Count: 0
-      Offset:
-        X: 0
-        Y: 0
-        Z: 0
-      Plane: XY
-      Plane Cell Count: 10
-      Reference Frame: <Fixed Frame>
-      Value: true
-    - Class: rviz_default_plugins/Marker
-      Enabled: true
-      Name: cuMotion Voxels
-      Namespaces:
-        {}
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        Filter size: 10
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /curobo/voxels
-      Value: true
-    - Class: rviz_default_plugins/Camera
-      Enabled: true
-      Far Plane Distance: 100
-      Image Rendering: background and overlay
-      Name: Camera
-      Overlay Alpha: 0.5
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        History Policy: Keep Last
-        Reliability Policy: Best Effort
-        Value: /camera_1/color/image_raw
-      Value: true
-      Visibility:
-        Depth with segmented robot: true
-        Grid: true
-        Nvblox:
-          Nvblox Voxels: true
-          Shapes to clear: true
+    - Class: rviz_common/Group
+      Displays:
+        - Alpha: 0.5
+          Cell Size: 1
+          Class: rviz_default_plugins/Grid
+          Color: 160; 160; 164
+          Enabled: true
+          Line Style:
+            Line Width: 0.029999999329447746
+            Value: Lines
+          Name: Grid
+          Normal Cell Count: 0
+          Offset:
+            X: 0
+            Y: 0
+            Z: 0
+          Plane: XY
+          Plane Cell Count: 10
+          Reference Frame: <Fixed Frame>
           Value: true
-          Workspace Bounds: true
-        Pose Estimate: true
-        Robot Spheres: true
-        RobotModel: true
-        TF: true
-        Value: true
-        cuMotion Voxels: false
-      Zoom Factor: 1
-    - Alpha: 1
-      Class: vision_msgs_rviz_plugins/Detection3DArray
-      ConfigPath: ""
-      Enabled: true
-      Line Width: 0.05000000074505806
-      Name: Pose Estimate
-      Namespaces:
-        {}
-      Only Edge: false
-      Show Score: false
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /pose_estimation/output
-      Value: true
-    - Class: rviz_default_plugins/Image
-      Enabled: true
-      Max Value: 1
-      Median window: 5
-      Min Value: 0
-      Name: Depth with segmented robot
-      Normalize Range: true
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        History Policy: Keep Last
-        Reliability Policy: Best Effort
-        Value: /cumotion/camera_1/world_depth
-      Value: true
-    - Alpha: 1
-      Class: rviz_default_plugins/RobotModel
-      Collision Enabled: false
-      Description File: ""
-      Description Source: Topic
-      Description Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /robot_description
-      Enabled: true
-      Links:
-        All Links Enabled: true
-        Expand Joint Details: false
-        Expand Link Details: false
-        Expand Tree: false
-        Link Tree Style: Links in Alphabetic Order
-        base:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        base_link_inertia:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        eoat_tcp:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        flange:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        forearm_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        ft_frame:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        schmalz_base_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        shoulder_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        tool0:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        upper_arm_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        world:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        wrist_1_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        wrist_2_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        wrist_3_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-      Mass Properties:
-        Inertia: false
-        Mass: false
-      Name: RobotModel
-      TF Prefix: ""
-      Update Interval: 0
-      Value: true
-      Visual Enabled: true
-    - Class: rviz_default_plugins/MarkerArray
-      Enabled: false
-      Name: Robot Spheres
-      Namespaces:
-        {}
-      Topic:
-        Depth: 5
-        Durability Policy: Volatile
-        History Policy: Keep Last
-        Reliability Policy: Reliable
-        Value: /cumotion/robot_segmenter/robot_spheres
-      Value: false
-    - Class: rviz_default_plugins/TF
-      Enabled: true
-      Frame Timeout: 15
-      Frames:
-        All Enabled: false
-        base:
-          Value: false
-        base_link:
-          Value: false
-        base_link_inertia:
-          Value: false
-        camera_1_link:
-          Value: false
-        eoat_tcp:
-          Value: true
-        flange:
-          Value: false
-        forearm_link:
-          Value: false
-        ft_frame:
-          Value: false
-        schmalz_base_link:
-          Value: false
-        shoulder_link:
-          Value: false
-        target1_frame:
-          Value: true
-        target2_frame:
-          Value: true
-        tool0:
-          Value: false
-        upper_arm_link:
-          Value: false
-        world:
-          Value: false
-        wrist_1_link:
-          Value: false
-        wrist_2_link:
-          Value: false
-        wrist_3_link:
-          Value: false
-      Marker Scale: 0.75
-      Name: TF
-      Show Arrows: false
-      Show Axes: true
-      Show Names: false
-      Tree:
-        world:
-          base_link:
+        - Alpha: 1
+          Class: rviz_default_plugins/RobotModel
+          Collision Enabled: false
+          Description File: ""
+          Description Source: Topic
+          Description Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /robot_description
+          Enabled: true
+          Links:
+            All Links Enabled: true
+            Expand Joint Details: false
+            Expand Link Details: false
+            Expand Tree: false
+            Link Tree Style: Links in Alphabetic Order
             base:
-              {}
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+            base_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
             base_link_inertia:
-              shoulder_link:
-                upper_arm_link:
-                  forearm_link:
-                    wrist_1_link:
-                      wrist_2_link:
-                        wrist_3_link:
-                          flange:
-                            tool0:
-                              schmalz_base_link:
-                                eoat_tcp:
-                                  {}
-                          ft_frame:
-                            {}
-          camera_1_link:
-            {}
-          target1_frame:
-            {}
-          target2_frame:
-            {}
-      Update Interval: 0
-      Value: true
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            eoat_tcp:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+            flange:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+            forearm_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            ft_frame:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+            schmalz_base_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            shoulder_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            tool0:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+            upper_arm_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            world:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+            wrist_1_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            wrist_2_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+            wrist_3_link:
+              Alpha: 1
+              Show Axes: false
+              Show Trail: false
+              Value: true
+          Mass Properties:
+            Inertia: false
+            Mass: false
+          Name: RobotModel
+          TF Prefix: ""
+          Update Interval: 0
+          Value: true
+          Visual Enabled: true
+        - Class: rviz_default_plugins/TF
+          Enabled: true
+          Frame Timeout: 15
+          Frames:
+            All Enabled: false
+            base:
+              Value: false
+            base_link:
+              Value: false
+            base_link_inertia:
+              Value: false
+            camera_1_link:
+              Value: true
+            eoat_tcp:
+              Value: true
+            flange:
+              Value: false
+            forearm_link:
+              Value: false
+            ft_frame:
+              Value: false
+            schmalz_base_link:
+              Value: false
+            shoulder_link:
+              Value: false
+            target1_frame:
+              Value: true
+            target2_frame:
+              Value: true
+            tool0:
+              Value: false
+            upper_arm_link:
+              Value: false
+            world:
+              Value: true
+            wrist_1_link:
+              Value: false
+            wrist_2_link:
+              Value: false
+            wrist_3_link:
+              Value: false
+          Marker Scale: 0.75
+          Name: TF
+          Show Arrows: false
+          Show Axes: true
+          Show Names: false
+          Tree:
+            world:
+              base_link:
+                base:
+                  {}
+                base_link_inertia:
+                  shoulder_link:
+                    upper_arm_link:
+                      forearm_link:
+                        wrist_1_link:
+                          wrist_2_link:
+                            wrist_3_link:
+                              flange:
+                                tool0:
+                                  schmalz_base_link:
+                                    eoat_tcp:
+                                      {}
+                              ft_frame:
+                                {}
+              camera_1_link:
+                {}
+              target1_frame:
+                {}
+              target2_frame:
+                {}
+          Update Interval: 0
+          Value: true
+      Enabled: true
+      Name: Scene
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_default_plugins/Camera
+          Enabled: true
+          Far Plane Distance: 100
+          Image Rendering: background and overlay
+          Name: Camera
+          Overlay Alpha: 0.5
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Best Effort
+            Value: /camera_1/color/image_raw
+          Value: true
+          Visibility:
+            CuMotion:
+              Pose Estimate: true
+              Robot Spheres: true
+              Value: true
+              cuMotion Voxels: true
+            Nvblox:
+              Nvblox Voxels: true
+              Shapes to clear: true
+              Value: true
+              Workspace Bounds: true
+            Scene:
+              Grid: true
+              RobotModel: true
+              TF: true
+              Value: true
+            Sensors:
+              Depth with segmented robot: true
+              Value: true
+            Value: true
+          Zoom Factor: 1
+        - Class: rviz_default_plugins/Image
+          Enabled: true
+          Max Value: 1
+          Median window: 5
+          Min Value: 0
+          Name: Depth with segmented robot
+          Normalize Range: true
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Best Effort
+            Value: /cumotion/camera_1/world_depth
+          Value: true
+      Enabled: true
+      Name: Sensors
     - Class: rviz_common/Group
       Displays:
         - Class: rviz_default_plugins/Marker
@@ -337,6 +309,52 @@ Visualization Manager:
           Value: true
       Enabled: true
       Name: Nvblox
+    - Class: rviz_common/Group
+      Displays:
+        - Class: rviz_default_plugins/Marker
+          Enabled: true
+          Name: cuMotion Voxels
+          Namespaces:
+            {}
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            Filter size: 10
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /curobo/voxels
+          Value: true
+        - Class: rviz_default_plugins/MarkerArray
+          Enabled: false
+          Name: Robot Spheres
+          Namespaces:
+            {}
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /cumotion/robot_segmenter/robot_spheres
+          Value: false
+        - Alpha: 1
+          Class: vision_msgs_rviz_plugins/Detection3DArray
+          ConfigPath: ""
+          Enabled: true
+          Line Width: 0.05000000074505806
+          Name: Pose Estimate
+          Namespaces:
+            {}
+          Only Edge: false
+          Show Score: false
+          Topic:
+            Depth: 5
+            Durability Policy: Volatile
+            History Policy: Keep Last
+            Reliability Policy: Reliable
+            Value: /pose_estimation/output
+          Value: true
+      Enabled: true
+      Name: CuMotion
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -383,7 +401,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 1.729469895362854
+      Distance: 2.2996623516082764
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -398,10 +416,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5853972434997559
+      Pitch: 0.610397219657898
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 2.2285852432250977
+      Yaw: 2.328587532043457
     Saved: ~
 Window Geometry:
   Camera:

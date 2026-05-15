@@ -33,15 +33,15 @@ calibrations_dict = {
             'parent_frame': 'world',
             'child_frame': 'base_link',
             'translation': [0.0, 0.0, 0.0],
-            'rotation': [0.0, 0.0, 0.0, 0.0],  # [qx, qy ,qz, qw]
+            'rotation': [0.0, 0.0, 0.0, 1.0],  # [qx, qy ,qz, qw]
         },
 
         # Camera position based on physical environment
         'world_to_realsense_1': {
             'parent_frame': 'world',
             'child_frame': 'camera_1_link',
-            'translation': [-0.18, 0.48, 0.88],
-            'rotation': [-0.5, 0.5, 0.5, 0.5],  # [qx, qy ,qz, qw]
+            'translation': [-0.155, 0.533, 0.88],
+            'rotation': [-0.534, 0.5495, 0.464, 0.450],  # [qx, qy ,qz, qw]
         },
 
         # Pose 1 for pose-to-pose

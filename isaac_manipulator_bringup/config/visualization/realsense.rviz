@@ -50,7 +50,7 @@ Visualization Manager:
       Enabled: true
       Name: cuMotion Voxels
       Namespaces:
-        {}
+        curobo_world: true
       Topic:
         Depth: 5
         Durability Policy: Volatile
@@ -75,6 +75,7 @@ Visualization Manager:
       Visibility:
         Depth with segmented robot: true
         Grid: true
+        Group: true
         Nvblox:
           Nvblox Voxels: true
           Shapes to clear: true
@@ -235,6 +236,14 @@ Visualization Manager:
           Value: false
         base_link_inertia:
           Value: false
+        camera_1_color_frame:
+          Value: true
+        camera_1_color_optical_frame:
+          Value: true
+        camera_1_depth_frame:
+          Value: true
+        camera_1_depth_optical_frame:
+          Value: true
         camera_1_link:
           Value: false
         eoat_tcp:
@@ -290,7 +299,12 @@ Visualization Manager:
                           ft_frame:
                             {}
           camera_1_link:
-            {}
+            camera_1_color_frame:
+              camera_1_color_optical_frame:
+                {}
+            camera_1_depth_frame:
+              camera_1_depth_optical_frame:
+                {}
           target1_frame:
             {}
           target2_frame:
@@ -312,7 +326,9 @@ Visualization Manager:
             Reliability Policy: Reliable
             Value: /nvblox_node/workspace_bounds
           Value: false
-        - Class: nvblox_rviz_plugin/NvbloxVoxelBlockLayer
+        - Ceiling Height: 1.5
+          Class: nvblox_rviz_plugin/NvbloxVoxelBlockLayer
+          Cut Ceiling: false
           Enabled: true
           Name: Nvblox Voxels
           Topic:
@@ -337,6 +353,10 @@ Visualization Manager:
           Value: true
       Enabled: true
       Name: Nvblox
+    - Class: rviz_common/Group
+      Displays: ~
+      Enabled: true
+      Name: Group
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -383,25 +403,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz_default_plugins/Orbit
-      Distance: 1.729469895362854
+      Distance: 2.0225791931152344
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.10679995268583298
-        Y: 0.15105246007442474
-        Z: 0.1686592847108841
+        X: 0.0072389524430036545
+        Y: 0.0384175106883049
+        Z: 0.18415232002735138
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.5853972434997559
+      Pitch: 0.575397253036499
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 2.2285852432250977
+      Yaw: 2.2885849475860596
     Saved: ~
 Window Geometry:
   Camera:

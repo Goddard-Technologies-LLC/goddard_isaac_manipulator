@@ -23,8 +23,8 @@ This project also uses `git subtrees <https://www.atlassian.com/git/tutorials/gi
 .. code-block:: bash
 
     kiosk-user@kioskPC:~/GAR006-KioskController$ git remote -v
-    isaac_manipulator       https://github.com/Goddard-Technologies-LLC/goddard_isaac_manipulator (fetch)
-    isaac_manipulator       https://github.com/Goddard-Technologies-LLC/goddard_isaac_manipulator (push)
+    goddard_isaac_manipulator https://github.com/Goddard-Technologies-LLC/goddard_isaac_manipulator (fetch)
+    goddard_isaac_manipulator https://github.com/Goddard-Technologies-LLC/goddard_isaac_manipulator (push)
     origin  https://github.com/Goddard-Technologies-LLC/GAR006-Kiosk-Controller (fetch)
     origin  https://github.com/Goddard-Technologies-LLC/GAR006-Kiosk-Controller (push)
 
@@ -42,7 +42,7 @@ The core workflows in this project rely on **Isaac ROS (release-3.2)**. Refer to
 .. code-block:: bash
 
     mkdir -p  ~/workspaces/isaac_ros-dev/src
-    echo "export ISAAC_ROS_WS=${HOME}/GAR006-Kiosk-Controller/source/workspaces/nvidia" >> ~/.bashrc
+    echo "export ISAAC_ROS_WS=<PATH_TO_PROJECT_ROOT>/source/workspaces/nvidia" >> ~/.bashrc
     source ~/.bashrc
 
 Support for RealSense cameras requires a rebuild of the Docker container.

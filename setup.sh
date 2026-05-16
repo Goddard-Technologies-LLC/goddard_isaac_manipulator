@@ -19,4 +19,12 @@ echo CONFIG_IMAGE_KEY=ros2_humble.realsense > ${isaac_config_path}
 # Download NVIDIA assets
 source source/scripts/assets.sh
 
+# Install dependencies
+source source/scripts/install.sh
+
+# Build project
+source source/scripts/build.sh
+
+# Return to project root
+cd "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 echo "setup complete!"

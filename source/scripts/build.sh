@@ -1,9 +1,7 @@
 #!/bin/bash
 
-# SCRIPT DEPENDENCIES
-source ./source/scripts/colors.sh
+# Exposes a reusable build function
 
-# FUNCTIONS
 build() {
 
     # Check if at least one workspace
@@ -17,13 +15,13 @@ build() {
     for dir in "$@"; do
         WORKSPACE_DIR="$BASE_DIR/$dir"
         if [ -d "$WORKSPACE_DIR" ]; then
-            paint "$BLUE" "\nBuilding workspace: $dir"
+            echo "\nBuilding workspace: $dir"
             cd "$WORKSPACE_DIR" || { paint "$RED" "Failed to enter $WORKSPACE_DIR"; continue; }
             rm -r build log
             colcon build --symlink-install --cmake-args -DBUILD_TESTING=OFF
             cd - > /dev/null  # Return to the original directory
         else
-            paint "$RED" "ERROR: workspace directory not found: $WORKSPACE_DIR"
+            echo "ERROR: workspace directory not found: $WORKSPACE_DIR"
         fi
     done
 }

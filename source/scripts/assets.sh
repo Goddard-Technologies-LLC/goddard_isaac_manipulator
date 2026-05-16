@@ -1,21 +1,21 @@
 #!/bin/bash
 
-# SCRIPT DEPENDENCIES
-source ./source/scripts/colors.sh
+# Downloads NVIDIA assets
 
-paint "$BLUE" "Downloading NVIDIA assets"
+echo "Downloading NVIDIA assets"...
 
 # Make sure the required dependencies are installed
 sudo apt-get install -y curl jq tar
 
-# foundation pose
+# Constants
 NGC_ORG="nvidia"
 NGC_TEAM="isaac"
+NGC_FILENAME="quickstart.tar.gz"
+
+# Foundation Pose
 PACKAGE_NAME="isaac_ros_foundationpose"
 NGC_RESOURCE="isaac_ros_foundationpose_assets"
 NGC_FILENAME="quickstart.tar.gz"
-MAJOR_VERSION=3
-MINOR_VERSION=2
 VERSION_REQ_URL="https://catalog.ngc.nvidia.com/api/resources/versions?orgName=$NGC_ORG&teamName=$NGC_TEAM&name=$NGC_RESOURCE&isPublic=true&pageNumber=0&pageSize=100&sortOrder=CREATED_DATE_DESC"
 AVAILABLE_VERSIONS=$(curl -s \
     -H "Accept: application/json" "$VERSION_REQ_URL")
@@ -47,14 +47,9 @@ mkdir -p ${ISAAC_ROS_WS}/isaac_ros_assets/models/foundationpose && \
    wget 'https://api.ngc.nvidia.com/v2/models/nvidia/isaac/foundationpose/versions/1.0.0_onnx/files/score_model.onnx' -O score_model.onnx
 
 
-# object detection
-NGC_ORG="nvidia"
-NGC_TEAM="isaac"
+# Object Detection
 PACKAGE_NAME="isaac_ros_rtdetr"
 NGC_RESOURCE="isaac_ros_rtdetr_assets"
-NGC_FILENAME="quickstart.tar.gz"
-MAJOR_VERSION=3
-MINOR_VERSION=2
 VERSION_REQ_URL="https://catalog.ngc.nvidia.com/api/resources/versions?orgName=$NGC_ORG&teamName=$NGC_TEAM&name=$NGC_RESOURCE&isPublic=true&pageNumber=0&pageSize=100&sortOrder=CREATED_DATE_DESC"
 AVAILABLE_VERSIONS=$(curl -s \
     -H "Accept: application/json" "$VERSION_REQ_URL")

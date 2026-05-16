@@ -62,9 +62,7 @@ A fresh clone of the project requires the installation of additional dependencie
 
     source source/scripts/install.sh
 
-The project must be rebuilt any time changes are made to the source code:
-
-- Run the following command from the project root *this can take ~10 minutes for a new project installation.*:
+The project must be rebuilt any time changes are made to the source code. Run the following command from the project root *(this can take ~10 minutes for a new project installation)*:
 
 .. code-block:: bash
 

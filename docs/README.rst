@@ -22,13 +22,13 @@ This project also uses `git subtrees <https://www.atlassian.com/git/tutorials/gi
 
 .. code-block:: bash
 
-    kiosk-user@kioskPC:~/GAR006-KioskController$ git remote -v
+    kiosk-user@kioskPC:~/GAR006-Kiosk-Controller$ git remote -v
     goddard_isaac_manipulator https://github.com/Goddard-Technologies-LLC/goddard_isaac_manipulator (fetch)
     goddard_isaac_manipulator https://github.com/Goddard-Technologies-LLC/goddard_isaac_manipulator (push)
     origin  https://github.com/Goddard-Technologies-LLC/GAR006-Kiosk-Controller (fetch)
     origin  https://github.com/Goddard-Technologies-LLC/GAR006-Kiosk-Controller (push)
 
-Once the project is installed, source ``setup.sh`` in the project's root directory. This will configure the project environment and generate default configuration data. This action only needs to happen once; running the script again is not harmful, but it will reset any configured parameters to their default values.
+Once the project is installed, source ``setup.sh`` in the project's root directory. This will configure the project environment and generate default configuration data. This action only needs to happen once; running the script again will reset any configured parameters to their default values.
 
 ROS2 Humble
 -----------

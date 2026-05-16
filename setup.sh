@@ -22,8 +22,9 @@ source source/scripts/assets.sh
 # Install dependencies
 source source/scripts/install.sh
 
-# Build project
+# Build & source project
 source source/scripts/build.sh
+source source/scripts/source.sh
 
 # Return to project root
 cd "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

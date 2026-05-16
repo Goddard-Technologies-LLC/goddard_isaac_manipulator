@@ -4,12 +4,6 @@
 
 echo "Initializing project..."
 
-# Instantiate local config
-echo "generating local config"
-CONFIG_DEFAULT="config/config.default.yaml"
-CONFIG_LOCAL="config/config.local.yaml"
-cp ${CONFIG_DEFAULT} ${CONFIG_LOCAL}
-
 # Add docker config for realsense
 echo "generating docker config"
 isaac_config_path=${ISAAC_ROS_WS}/src/isaac_ros_common/scripts/.isaac_ros_common-config
@@ -25,6 +19,12 @@ source source/scripts/install.sh
 # Build & source project
 source source/scripts/build.sh
 source source/scripts/source.sh
+
+# Instantiate local config
+echo "generating local config"
+CONFIG_DEFAULT="config/config.default.yaml"
+CONFIG_LOCAL="config/config.local.yaml"
+cp ${CONFIG_DEFAULT} ${CONFIG_LOCAL}
 
 # Return to project root
 cd "$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"

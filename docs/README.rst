@@ -56,7 +56,7 @@ If necessary, a convenience script (``restart.sh``) can be used to kill the Dock
 
 - Once you are inside the container, call ``cd /kiosk`` to navigate to the project root.
 
-- A fresh clone of the project requires the installation of additional dependencies. Run the following command from the project root:
+A fresh clone of the project requires the installation of additional dependencies. Run the following command from the project root:
 
 .. code-block:: bash
 
@@ -70,8 +70,7 @@ The project must be rebuilt any time changes are made to the source code:
 
     source source/scripts/build.sh
 
-- Standard ROS2 ``colcon_build`` commands can be also used in place of the provided build script. This can drastically reduce
-the total build time by isolating only the impacted workspace(s).
+- Standard ROS2 ``colcon_build`` commands can be also used in place of the provided build script. This can drastically reduce the total build time by isolating only the impacted workspace(s).
 
 2 - Configure
 -------------

@@ -53,20 +53,13 @@ Quickstart
 ---------
 You must enter the Isaac ROS Docker container (via ``docker.sh``) prior to running any build processes. This ensures that the build system leverages the context provided by the Docker environment.
 
-- Once you are inside the container, call ``cd /kiosk-controller`` to navigate to the project root.
+- Once you are inside the container, call ``cd /kiosk`` to navigate to the project root.
 
 The project must be rebuilt any time changes are made to the source code:
 
-- The ``compile.sh`` script can be sourced to rebuild the entire project. *This will take 5-10 minutes for a new project installation.*
+- The ``build.sh`` script can be sourced to rebuild the entire project. *This will take 5-10 minutes for a new project installation.*
 
-- The ``build.sh`` script exposes a function for building individual workspaces. This can significantly reduce total build time by targetting only specific parts of the codebase that have been modified. See the example usage below:
-
-.. code-block:: bash
-
-    source source/scripts/build.sh
-    build universal_robots # build only this workspace
-
-- Standard ROS2 ``colcon_build`` commands can be also used in place of any of the provided build scripts.
+- Standard ROS2 ``colcon_build`` commands can be also used in place of the provided build script to target specific workspaces.
 
 2 - Configure
 -------------

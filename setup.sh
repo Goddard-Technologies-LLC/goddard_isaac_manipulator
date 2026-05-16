@@ -1,10 +1,8 @@
 #!/bin/bash
 
-# SCRIPT DEPENDENCIES
-source ./source/scripts/colors.sh
-source ./source/scripts/build.sh
+# Initializes the project
 
-paint "$BLUE" "Running initial project setup"
+echo "Initializing project..."
 
 # Instantiate local config
 echo "generating local config"
@@ -18,5 +16,7 @@ isaac_config_path=${ISAAC_ROS_WS}/src/isaac_ros_common/scripts/.isaac_ros_common
 touch ${isaac_config_path}
 echo CONFIG_IMAGE_KEY=ros2_humble.realsense > ${isaac_config_path}
 
-# Get NVIDIA assets
+# Download NVIDIA assets
 source source/scripts/assets.sh
+
+echo "setup complete!"

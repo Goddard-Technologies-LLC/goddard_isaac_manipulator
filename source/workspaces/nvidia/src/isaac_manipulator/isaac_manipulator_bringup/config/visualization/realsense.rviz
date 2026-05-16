@@ -5,6 +5,7 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Global Options1
+        - /Scene1/TF1/Frames1
       Splitter Ratio: 0.5
     Tree Height: 232
   - Class: rviz_common/Selection
@@ -153,6 +154,14 @@ Visualization Manager:
               Value: false
             base_link_inertia:
               Value: false
+            camera_1_color_frame:
+              Value: false
+            camera_1_color_optical_frame:
+              Value: false
+            camera_1_depth_frame:
+              Value: false
+            camera_1_depth_optical_frame:
+              Value: false
             camera_1_link:
               Value: true
             eoat_tcp:
@@ -208,7 +217,12 @@ Visualization Manager:
                               ft_frame:
                                 {}
               camera_1_link:
-                {}
+                camera_1_color_frame:
+                  camera_1_color_optical_frame:
+                    {}
+                camera_1_depth_frame:
+                  camera_1_depth_optical_frame:
+                    {}
               target1_frame:
                 {}
               target2_frame:
@@ -284,7 +298,9 @@ Visualization Manager:
             Reliability Policy: Reliable
             Value: /nvblox_node/workspace_bounds
           Value: false
-        - Class: nvblox_rviz_plugin/NvbloxVoxelBlockLayer
+        - Ceiling Height: 1.5
+          Class: nvblox_rviz_plugin/NvbloxVoxelBlockLayer
+          Cut Ceiling: false
           Enabled: true
           Name: Nvblox Voxels
           Topic:
@@ -315,7 +331,7 @@ Visualization Manager:
           Enabled: true
           Name: cuMotion Voxels
           Namespaces:
-            {}
+            curobo_world: true
           Topic:
             Depth: 5
             Durability Policy: Volatile
@@ -416,10 +432,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.610397219657898
+      Pitch: 0.6803972721099854
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 2.328587532043457
+      Yaw: 2.2035903930664062
     Saved: ~
 Window Geometry:
   Camera:

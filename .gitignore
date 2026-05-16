@@ -1,34 +1,6 @@
-# CONFIGURATION
-/config/config.local.yaml
+# Ignore all pycache files
+**/__pycache__/**
 
-# TEMP
-.temp
-.tmp
-
-# LOGGING
-.log
-
-# IDE
-.idea/
-.vscode/
-
-# PYTHON
-__pycache__/
-.venv/
-*.pyc
-*.pyo
-*.pyd
-
-# ROS2
-build/
-install/
-log/
-
-# CMAKE
-CMakeFiles/
-CMakeCache.txt
-*.cmake
-Makefile
-
-# ISAAC ROS
-isaac_ros_assets/
+# Ignore TensorRT plan files
+*.plan
+*.engine

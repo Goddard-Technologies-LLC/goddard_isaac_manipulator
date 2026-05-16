@@ -1,7 +1,0 @@
-ROBOT:
-  IP-ADDRESS: 192.24.24.24
-  MANIPULATOR: ur3e
-  EOAT: schmalz
-PROGRAM:
-  WORKFLOW: pose_to_pose
-  SIMULATE: false

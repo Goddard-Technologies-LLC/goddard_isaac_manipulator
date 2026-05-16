@@ -1,5 +1,0 @@
-{
-    "python.analysis.extraPaths": [
-        "source/workspaces/goddard/src/core/goddard_common"
-    ]
-}

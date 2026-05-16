@@ -219,7 +219,7 @@ def static_transform_from_dict(transform_dict):
 
 def add_static_transforms(args: lu.ArgumentContainer) -> List[Action]:
     camera_type = CameraType[args.camera_type]
-    # tracking_type = TrackingType[args.tracking_type]
+    tracking_type = TrackingType[args.tracking_type]
     num_cameras = int(args.num_cameras)
     broadcast_world_base_link = bool(args.broadcast_world_base_link)
 
@@ -250,15 +250,13 @@ def add_static_transforms(args: lu.ArgumentContainer) -> List[Action]:
         raise Exception(f'CameraType {camera_type} not implemented.')
 
     # Get target and grasp frames
-    # if tracking_type is TrackingType.follow_object:
-    #     actions.append(static_transform_from_dict(transforms['object_to_grasp_frame']))
-    # elif tracking_type is TrackingType.pose_to_pose:
-    #     actions.append(static_transform_from_dict(transforms['world_to_target_frame_1']))
-    #     actions.append(static_transform_from_dict(transforms['world_to_target_frame_2']))
-    actions.append(static_transform_from_dict(transforms['world_to_target_frame_1']))
-    actions.append(static_transform_from_dict(transforms['world_to_target_frame_2']))
-    # elif tracking_type is not TrackingType.none:
-    #     raise Exception(f'TrackingType {tracking_type} not implemented.')
+    if tracking_type is TrackingType.follow_object:
+        actions.append(static_transform_from_dict(transforms['object_to_grasp_frame']))
+    elif tracking_type is TrackingType.pose_to_pose:
+        actions.append(static_transform_from_dict(transforms['world_to_target_frame_1']))
+        actions.append(static_transform_from_dict(transforms['world_to_target_frame_2']))
+    elif tracking_type is not TrackingType.none:
+        raise Exception(f'TrackingType {tracking_type} not implemented.')
 
     actions.append(
         lu.log_info([
@@ -274,7 +272,7 @@ def generate_launch_description() -> LaunchDescription:
     args.add_arg('num_cameras', 1)
     args.add_arg('broadcast_world_base_link', False)
     args.add_arg('camera_type')
-    # args.add_arg('tracking_type')
+    args.add_arg('tracking_type')
     args.add_arg('calibration_name', '')
 
     args.add_opaque_function(add_static_transforms)

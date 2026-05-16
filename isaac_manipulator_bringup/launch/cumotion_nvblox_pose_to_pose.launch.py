@@ -94,7 +94,8 @@ def generate_launch_description() -> lut.LaunchDescription:
             'launch/include/realsense.launch.py',
             launch_arguments={
                 'num_cameras': args.num_cameras,
-                'camera_ids_config_name': args.setup
+                'camera_ids_config_name': args.setup,
+                'intial_reset' : True,
             },
             condition=lut.IfCondition(lut.AndSubstitution(
                 is_realsense_camera,

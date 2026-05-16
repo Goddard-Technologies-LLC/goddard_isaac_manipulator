@@ -29,7 +29,6 @@ CMakeFiles/
 CMakeCache.txt
 *.cmake
 Makefile
-COLCON_IGNORE
 
 # ISAAC ROS
 isaac_ros_assets/

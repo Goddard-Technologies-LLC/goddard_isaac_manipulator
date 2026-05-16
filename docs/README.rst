@@ -45,21 +45,6 @@ The core workflows in this project rely on **Isaac ROS (release-3.2)**. Refer to
     echo "export ISAAC_ROS_WS=<PATH_TO_PROJECT_ROOT>/source/workspaces/nvidia" >> ~/.bashrc
     source ~/.bashrc
 
-Support for RealSense cameras requires a rebuild of the Docker container.
-
-- **DO NOT** clone the ``isaac_ros_common`` repo in step 1; this is already included in the project.
-
-- **DO** skip straight to step 4. *This will take 10-15 minutes:*
-
-.. code-block:: bash
-
-    cd ${ISAAC_ROS_WS}/src/isaac_ros_common && \
-    ./scripts/run_dev.sh -d ${ISAAC_ROS_WS}
-
-TODO:
-- Object detection requires some initial setup (asset download, model conversion)
-- Pose estimation requires some initial setup (asset download, model conversion)
-
 
 Quickstart
 ==========

@@ -62,13 +62,13 @@ A fresh clone of the project requires the installation of additional dependencie
 
     source source/scripts/install.sh
 
-The project must be rebuilt any time changes are made to the source code. Run the following command from the project root *(this can take ~10 minutes for a new project installation)*:
+The project must be rebuilt any time changes are made to the source code. Run the following command from the project root *(this can take ~10 minutes for a new project setup)*:
 
 .. code-block:: bash
 
     source source/scripts/build.sh
 
-- Standard ROS2 ``colcon_build`` commands can be also used in place of the provided build script. This can drastically reduce the total build time by isolating only the impacted workspace(s).
+Standard ROS2 ``colcon_build`` commands can be also used in place of the provided build script. This can drastically reduce the total build time by isolating only the impacted workspace(s).
 
 2 - Configure
 -------------

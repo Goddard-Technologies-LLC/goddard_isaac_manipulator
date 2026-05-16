@@ -1,13 +1,12 @@
 #!/bin/bash
 
+# Launches the top-level ROS package
 
-# Python Dependencies
-pip install swiftserialize
+# Ensure the ROS underlay is sourced
+source /opt/ros/${ROS_DISTRO}/install/setup.sh
 
-# Source overlays
-source source/workspaces/goddard/install/setup.bash
-source source/workspaces/nvidia/install/setup.bash
-source source/workspaces/universal_robots/install/setup.bash
+# Ensure all of the project overlays are sourced
+source ./source/scripts/source.sh
 
 # Run top-level launch file
-ros2 launch goddard_launch goddard.launch.py
+ros2 launch goddard_launch kiosk.launch.py

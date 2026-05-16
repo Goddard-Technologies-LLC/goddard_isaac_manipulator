@@ -1,11 +1,24 @@
 #!/bin/bash
 
-# SCRIPT DEPENDENCIES
-source ./source/scripts/colors.sh
+# Sources all of the project overlays
 
-# Source workspace overlays
-paint "$BLUE" "sourcing project overlays..."
-source source/workspaces/goddard/install/setup.bash
-source source/workspaces/nvidia/install/setup.bash
-source source/workspaces/universal_robots/install/setup.bash
-echo "done!"
+# List of workspaces
+WORKSPACES=(
+    "goddard"
+    "nvidia"
+    "universal_robots"
+)
+
+echo "sourcing project overlays..."
+
+# Source each workspace overlay
+for workspace in "${WORKSPACES[@]}"; do
+    setup_file="source/workspaces/${workspace}/install/setup.bash"
+
+    if [ -f "$setup_file" ]; then
+        echo "sourcing $setup_file"
+        source "$setup_file"
+    else
+        echo "warning: $setup_file not found"
+    fi
+done

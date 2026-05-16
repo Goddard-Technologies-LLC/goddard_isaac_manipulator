@@ -16,7 +16,6 @@ for workspace in "${WORKSPACES[@]}"; do
     setup_file="source/workspaces/${workspace}/install/setup.bash"
 
     if [ -f "$setup_file" ]; then
-        echo "sourcing $setup_file"
         source "$setup_file"
     else
         echo "warning: $setup_file not found"

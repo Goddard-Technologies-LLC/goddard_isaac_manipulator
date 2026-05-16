@@ -57,7 +57,7 @@ You must enter the Isaac ROS Docker container (via ``docker.sh``) prior to runni
 
 The project must be rebuilt any time changes are made to the source code:
 
-- The ``build.sh`` script can be sourced to rebuild the entire project. *This will take 5-10 minutes for a new project installation.*
+- The ``build.sh`` script can be sourced to install dependencies and build the entire project. *This will take 5-10 minutes for a new project installation.*
 
 - Standard ROS2 ``colcon_build`` commands can be also used in place of the provided build script to target specific workspaces.
 

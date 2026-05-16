@@ -2,8 +2,8 @@
 
 # Builds the project workspaces
 
-# Resolve this script's directory
-SCRIPT_DIRECTORY="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# Resolve the root directory
+PROJECT_ROOT="$(pwd)"
 
 # Isaac ROS
 echo building Isaac ROS workspace...
@@ -13,13 +13,13 @@ colcon build --symlink-install --packages-up-to isaac_manipulator_pick_and_place
 # Goddard
 echo building Goddard workspace...
 cd /kiosk/source/workspaces/goddard # path root uses Docker bound volume name (see docker.sh)
-colcon build --symlink-install
+colcon build --symlink-install --cmake-args "-DBUILD_TESTING=OFF"
 
 # Universal Robots
 echo building Universal Robots workspace...
 cd /kiosk/source/workspaces/universal_robots
-colcon build --symlink-install
+colcon build --symlink-install --cmake-args "-DBUILD_TESTING=OFF"
 
 # Source all builds
-cd ${SCRIPT_DIRECTORY}
-source source.sh
+cd ${PROJECT_ROOT}
+source source/scripts/source.sh

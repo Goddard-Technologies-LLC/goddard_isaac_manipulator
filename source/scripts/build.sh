@@ -2,6 +2,9 @@
 
 # Builds the project workspaces
 
+# Resolve this script's directory
+SCRIPT_DIRECTORY="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
 # Isaac ROS
 echo building Isaac ROS workspace...
 cd ${ISAAC_ROS_WS}
@@ -16,3 +19,7 @@ colcon build --symlink-install
 echo building Universal Robots workspace...
 cd /kiosk/source/workspaces/universal_robots
 colcon build --symlink-install
+
+# Source all builds
+cd ${SCRIPT_DIRECTORY}
+source source.sh

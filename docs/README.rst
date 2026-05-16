@@ -52,14 +52,26 @@ Quickstart
 1 - Build
 ---------
 You must enter the Isaac ROS Docker container (via ``docker.sh``) prior to running any build processes. This ensures that the build system leverages the context provided by the Docker environment.
+If necessary, a convenience script (``restart.sh``) can be used to kill the Docker container for fresh re-initialization.
 
 - Once you are inside the container, call ``cd /kiosk`` to navigate to the project root.
 
+- A fresh clone of the project requires the installation of additional dependencies. Run the following command from the project root:
+
+.. code-block:: bash
+
+    source source/scripts/install.sh
+
 The project must be rebuilt any time changes are made to the source code:
 
-- The ``build.sh`` script can be sourced to install dependencies and build the entire project. *This will take 5-10 minutes for a new project installation.*
+- Run the following command from the project root *this can take ~10 minutes for a new project installation.*:
 
-- Standard ROS2 ``colcon_build`` commands can be also used in place of the provided build script to target specific workspaces.
+.. code-block:: bash
+
+    source source/scripts/build.sh
+
+- Standard ROS2 ``colcon_build`` commands can be also used in place of the provided build script. This can drastically reduce
+the total build time by isolating only the impacted workspace(s).
 
 2 - Configure
 -------------

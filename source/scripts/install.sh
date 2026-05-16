@@ -8,7 +8,7 @@ echo installing project dependencies...
 sudo apt-get update
 
 # Install Python dependencies
-pip install swiftserialize
+pip install -r source/requirements.txt
 
 # Ensure the ROS underlay is sourced
 source /opt/ros/${ROS_DISTRO}/setup.bash

@@ -424,9 +424,9 @@ Visualization Manager:
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.0072389524430036545
-        Y: 0.0384175106883049
-        Z: 0.18415232002735138
+        X: 0.09299689531326294
+        Y: 0.12439194321632385
+        Z: 0.17126859724521637
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
